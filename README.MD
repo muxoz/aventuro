@@ -1,96 +1,78 @@
-# Aventuro API
+# 🌐 Aventuro
 
-The Aventuro API provides functionalities for users to explore travel packages, make reservations, and manage their accounts. It supports user registration, authentication with JWT, and offers various features to facilitate a seamless travel booking experience.
-
-## Frontend:
-### [Frontend Repository](https://github.com/stivenm0/aventuro_frontend.git)
-
-Video: [Watch Video](https://youtu.be/gSUW1SWNJuk?si=VmcKAuGltvgrbWJW)
+Aventuro is a travel agency web application that allows users to explore travel packages, make reservations, and manage their accounts efficiently. With JWT authentication and various features, it provides a seamless and intuitive booking experience. 🚀
 
 ## Content
 
-* [Screenshots](#screenshots)
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Technologies](#technologies)
+- [Demo](#demo)
+- [Technologies](#technologies)
+- [Installation](#installation)
 
-## Screenshots
-### Documentation
-![Documentation](https://raw.githubusercontent.com/stivenm0/aventuro_backend/main/public/docs/doc-api.png)
 
-### Admin Panels
-![Dashboard](https://raw.githubusercontent.com/stivenm0/aventuro_backend/main/public/docs/dashboard.png)
+## Demo
 
-![Admins](https://raw.githubusercontent.com/stivenm0/aventuro_backend/main/public/docs/admins.png)
+[Watch Video](https://youtu.be/gSUW1SWNJuk?si=VmcKAuGltvgrbWJW)
 
-![Packages](https://raw.githubusercontent.com/stivenm0/aventuro_backend/main/public/docs/packages.png)
+### Frontend
+|![Packages](./.docs/front/packages.png) | ![Package](./.docs/front/package.png) | ![Bookings](./.docs/front/bookings.png) | ![Booking](./.docs/front/booking.png) |
+| ------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- | 
 
-![Bookigns](https://raw.githubusercontent.com/stivenm0/aventuro_backend/main/public/docs/bookings.png)
+### Backend
+
+|![Home](./.docs/back/doc-api.png) | ![Packages](./.docs/back/packages.png) | ![Bookings](./.docs/back/bookings.png) | ![Booking](./.docs/back/admins.png) |
+| ------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- | 
+
+## Technologies
+| Backend (Laravel)  | Frontend (Vue ) |
+|--------------------|------------------------|
+| Laravel 11        | Vue.js 3               |
+| MoonShine 2       | Tailwind CSS           |
+| MySQL            | Pinia                   |
+| JWT               |                        |
+
+
 
 ## Requirements
 
-Package | Version
---- | ---
-[Composer](https://getcomposer.org/)  | V2.4.1
-[PHP](https://www.php.net/)  | V8.3.6
-[MySQL](https://www.mysql.com/)  | V8.0.30
+| Package                              | Version |
+| ------------------------------------ | ------- |
+| [Composer](https://getcomposer.org/) | V2.4.1  |
+| [PHP](https://www.php.net/)          | V8.3.6  |
+| [MySQL](https://www.mysql.com/)      | V8.0.30 |
+
+---
 
 ## Installation
 Here is how you can run the project locally:
 
 1. Clone the repository
-    ```sh
-    git clone https://github.com/stivenm0/aventuro_backend.git
-    ```
 
-2. Navigate to the project's root directory
-    ```sh
-    cd aventuro_backend
-    ```
+```bash
+git clone https://github.com/estivenm0/aventuro.git
+cd aventuro
+```
 
-3. Copy the `.env.example` file to `.env`
-    ```sh
-    cp .env.example .env
-    ```
+###  Backend
 
-4. Create a database named `aventuro`
+```bash
+cd backend
+cp .env.example .env
+composer install
+php artisan jwt:secret
+php artisan key:generate
+php artisan migrate --seed
+php artisan storage:link
+```
 
-5. Create a symbolic link
-    ```sh
-    php artisan storage:link
-    ```
+### Frontend
 
-6. Install PHP dependencies
-    ```sh
-    composer install
-    ```
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-7. Generate the application key
-    ```sh
-    php artisan key:generate
-    ```
-
-8. Generate the jwt key
-    ```sh
-    php artisan jwt:secret
-    ```
-
-9. Run migrations
-    ```sh
-    php artisan migrate
-    ```
-
-10. Run seeders
-    ```sh
-    php artisan db:seed
-    ```
-
-## Technologies
-
-* Laravel 11
-* MoonShine 2 
-* MySQL
-* JWT
 
 ## Database
-![Database](https://raw.githubusercontent.com/stivenm0/aventuro_backend/main/public/docs/aventuroDB.jpg)
+
+![Database](./.docs/back/aventuroDB.jpg)
