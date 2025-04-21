@@ -11,7 +11,7 @@ Aventuro is a travel agency web application that allows users to explore travel 
 
 ## Demo
 
-[Watch Video](https://youtu.be/gSUW1SWNJuk?si=VmcKAuGltvgrbWJW)
+[Watch Video](https://youtu.be/enFP3gEd3sQ)
 
 ### Frontend
 |![Packages](./.docs/front/packages.png) | ![Package](./.docs/front/package.png) | ![Bookings](./.docs/front/bookings.png) | ![Booking](./.docs/front/booking.png) |
