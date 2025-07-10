@@ -14,12 +14,12 @@ Aventuro is a travel agency web application that allows users to explore travel 
 [Watch Video](https://youtu.be/enFP3gEd3sQ)
 
 ### Frontend
-|![Packages](./.docs/front/packages.png) | ![Package](./.docs/front/package.png) | ![Bookings](./.docs/front/bookings.png) | ![Booking](./.docs/front/booking.png) |
+|![Packages](./_docs/front/packages.png) | ![Package](./_docs/front/package.png) | ![Bookings](./_docs/front/bookings.png) | ![Booking](./_docs/front/booking.png) |
 | ------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- | 
 
 ### Backend
 
-|![Home](./.docs/back/doc-api.png) | ![Packages](./.docs/back/packages.png) | ![Bookings](./.docs/back/bookings.png) | ![Booking](./.docs/back/admins.png) |
+|![Home](./_docs/back/doc-api.png) | ![Packages](./_docs/back/packages.png) | ![Bookings](./_docs/back/bookings.png) | ![Booking](./_docs/back/admins.png) |
 | ------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- | 
 
 ## Technologies
@@ -75,4 +75,4 @@ npm run dev
 
 ## Database
 
-![Database](./.docs/back/aventuroDB.jpg)
+![Database](./_docs/back/aventuroDB.jpg)
