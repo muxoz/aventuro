@@ -14,12 +14,11 @@ class Offer extends Model
         'package_id',
         'discount',
         'start_date',
-        'end_date'
+        'end_date',
     ];
 
-    public function package() : BelongsTo {
+    public function package(): BelongsTo
+    {
         return $this->belongsTo(Package::class);
     }
-
-
 }

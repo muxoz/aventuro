@@ -22,7 +22,7 @@ class BookingResource extends JsonResource
             'quantity' => $this->quantity,
             'total' => $this->total,
             'travel_date' => Carbon::parse($this->travel_date)->isoFormat('dddd, D [de] MMMM [de] YYYY'),
-            'created_at' => $this->created_at->diffForHumans() . ' ' . $this->created_at->format('d/m/y'),
+            'created_at' => $this->created_at->diffForHumans().' '.$this->created_at->format('d/m/y'),
         ];
     }
 }

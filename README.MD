@@ -26,7 +26,7 @@ Aventuro is a travel agency web application that allows users to explore travel 
 | Backend (Laravel)  | Frontend (Vue ) |
 |--------------------|------------------------|
 | Laravel 11        | Vue.js 3               |
-| MoonShine 2       | Tailwind CSS           |
+| MoonShine 3       | Tailwind CSS           |
 | MySQL            | Pinia                   |
 | JWT               |                        |
 

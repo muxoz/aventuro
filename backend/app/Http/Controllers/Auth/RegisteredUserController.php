@@ -7,14 +7,11 @@ use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
-    
     /**
      * Handle an incoming registration request.
      *
@@ -42,8 +39,8 @@ class RegisteredUserController extends Controller
         $token = auth()->login($user);
 
         return response()->json([
-            'user'  => $user,
-            'token' => $token
+            'user' => $user,
+            'token' => $token,
         ]);
     }
 }

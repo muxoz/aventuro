@@ -9,86 +9,79 @@ use App\Models\Category;
 use App\Models\Offer;
 use App\Models\Package;
 use App\Models\User;
-use MoonShine\Pages\Page;
-use MoonShine\Components\MoonShineComponent;
-use MoonShine\Decorations\Column;
-use MoonShine\Decorations\Divider;
-use MoonShine\Decorations\Grid;
-use MoonShine\Decorations\LineBreak;
-use MoonShine\Metrics\ValueMetric;
+use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Laravel\Pages\Page;
+use MoonShine\Support\Attributes\Icon;
+use MoonShine\UI\Components\Layout\Grid;
+use MoonShine\UI\Components\Metrics\Wrapped\ValueMetric;
 
+#[Icon('s.inbox')]
+#[\MoonShine\MenuManager\Attributes\SkipMenu]
 class Dashboard extends Page
 {
     /**
      * @return array<string, string>
      */
-    public function breadcrumbs(): array
+    public function getBreadcrumbs(): array
     {
         return [
-            '#' => $this->title()
+            '#' => $this->getTitle(),
         ];
     }
 
-    public function title(): string
+    public function getTitle(): string
     {
         return $this->title ?: 'Dashboard';
     }
 
     /**
-     * @return list<MoonShineComponent>
+     * @return list<ComponentContract>
      */
-    public function components(): array
-	{
-		return [
+    protected function components(): iterable
+    {
+        return [
             Grid::make([
-               
-                    ValueMetric::make('Users')
-                        ->value(User::count())
-                        ->icon('heroicons.user-group')
-                        ->columnSpan(3),
 
-                
-                    ValueMetric::make('Packages')
-                        ->value(Package::count()) 
-                        ->icon('heroicons.bars-4')
-                        ->columnSpan(3),
+                ValueMetric::make('Users')
+                    ->value(fn (): int => User::count())
+                    ->icon('s.user-group')
+                    ->columnSpan(3),
 
-                
-                    ValueMetric::make('Offers')
-                        ->value(Offer::count())
-                        ->icon('heroicons.ticket')
-                        ->columnSpan(3),
-            
-                
-                    ValueMetric::make('Bookings')
-                        ->value(Booking::count())
-                        ->icon('heroicons.banknotes')
-                        ->columnSpan(3),
+                ValueMetric::make('Packages')
+                    ->value(fn (): int => Package::count())
+                    ->icon('s.archive-box-arrow-down')
+                    ->columnSpan(3),
 
-                    ValueMetric::make('Pending Bookings')
-                        ->value(Booking::where('status', 'Pending')->count())
-                        ->icon('heroicons.hand-raised')
-                        ->columnSpan(3),
+                ValueMetric::make('Offers')
+                    ->value(fn (): int => Offer::count())
+                    ->icon('s.ticket')
+                    ->columnSpan(3),
 
-                    ValueMetric::make('Cancelled Bookings')
-                        ->value(Booking::where('status', 'Cancelled')->count())
-                        ->icon('heroicons.no-symbol')
-                        ->columnSpan(3),
+                ValueMetric::make('Bookings')
+                    ->value(fn (): int => Booking::count())
+                    ->icon('s.banknotes')
+                    ->columnSpan(3),
 
-                    ValueMetric::make('Payed Bookings')
-                        ->value(Booking::where('status', 'Payed')->count())
-                        ->icon('heroicons.banknotes')
-                        ->columnSpan(3),
+                ValueMetric::make('Pending Bookings')
+                    ->value(fn (): int => Booking::where('status', 'Pending')->count())
+                    ->icon('s.hand-raised')
+                    ->columnSpan(3),
 
-                
-                    ValueMetric::make('Categories')
-                        ->value(Category::count())
-                        ->icon('heroicons.tag')
-                        ->columnSpan(3)
-                
-            ])
-                
-           
+                ValueMetric::make('Cancelled Bookings')
+                    ->value(fn (): int => Booking::where('status', 'Cancelled')->count())
+                    ->icon('nsymbol')
+                    ->columnSpan(3),
+
+                ValueMetric::make('Payed Bookings')
+                    ->value(fn (): int => Booking::where('status', 'Payed')->count())
+                    ->icon('s.banknotes')
+                    ->columnSpan(3),
+
+                ValueMetric::make('Categories')
+                    ->value(fn (): int => Category::count())
+                    ->icon('s.tag')
+                    ->columnSpan(3),
+            ]),
         ];
-	}
+    }
 }

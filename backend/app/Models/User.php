@@ -9,10 +9,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
+use Sweet1s\MoonshineRBAC\Traits\MoonshineRBACHasRoles;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use HasFactory, Notifiable, HasApiTokens;
+    use HasApiTokens, HasFactory, Notifiable;
+    use MoonshineRBACHasRoles;
+
+    const SUPER_ADMIN_ROLE_ID = 1;
 
     /**
      * The attributes that are mass assignable.
@@ -50,11 +54,12 @@ class User extends Authenticatable implements JWTSubject
         ];
     }
 
-    public function bookings() : HasMany {
+    public function bookings(): HasMany
+    {
         return $this->hasMany(Booking::class);
     }
 
-      /**
+    /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
      * @return mixed
@@ -64,7 +69,7 @@ class User extends Authenticatable implements JWTSubject
         return $this->getKey();
     }
 
-     /**
+    /**
      * Return a key value array, containing any custom claims to be added to the JWT.
      *
      * @return array
@@ -73,6 +78,4 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
-
-
 }

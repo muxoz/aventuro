@@ -19,18 +19,11 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(15)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
         $this->call(CategorySeeder::class);
-        $this->call(MoonshineSeeder::class);
-
         Package::factory(50)
-        ->has(Item::factory()->count(5))
-        ->has(Offer::factory()->count(1))
-        ->create();
+            ->has(Item::factory()->count(5))
+            ->has(Offer::factory()->count(1))
+            ->create();
 
         Booking::factory(30)->create();
     }

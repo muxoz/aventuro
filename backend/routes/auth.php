@@ -29,5 +29,5 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 //                 ->name('verification.send');
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->middleware('auth:api')
-                ->name('logout');
+    ->middleware('auth:api')
+    ->name('logout');

@@ -17,7 +17,8 @@ class Category extends Model
         'description',
     ];
 
-    public function packages() : HasMany {
+    public function packages(): HasMany
+    {
         return $this->hasMany(Package::class);
     }
 }

@@ -33,9 +33,8 @@ class AppServiceProvider extends ServiceProvider
             return config('app.frontend_url')."/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
         });
 
-        
-        Gate::policy(MoonshineUser::class, MoonshineUserPolicy::class);
-        Gate::policy(MoonshineUserRole::class, MoonshineUserRolePolicy::class);
+        // Gate::policy(MoonshineUser::class, MoonshineUserPolicy::class);
+        // Gate::policy(MoonshineUserRole::class, MoonshineUserRolePolicy::class);
 
         JsonResource::wrap('list');
 

@@ -1,0 +1,24 @@
+{
+	"name": "estivenm0/admin",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "MIT",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Estivenm0\\Admin\\": "src/",
+			"Estivenm0\\Admin\\Tests\\": "tests/",
+			"Estivenm0\\Admin\\Database\\Factories\\": "database/factories/",
+			"Estivenm0\\Admin\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Estivenm0\\Admin\\Providers\\AdminServiceProvider"
+			]
+		}
+	}
+}

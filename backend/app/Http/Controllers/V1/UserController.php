@@ -11,10 +11,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
-    {
-        
-    }
+    public function index(Request $request) {}
 
     /**
      * Store a newly created resource in storage.

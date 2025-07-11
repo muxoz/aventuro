@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone', 20);
             $table->string('address');
             $table->integer('quantity');
-            $table->decimal('total', 10,2);
+            $table->decimal('total', 10, 2);
             $table->enum('status', ['Pending', 'Payed', 'Cancelled'])->default('Pending');
             $table->timestamps();
         });

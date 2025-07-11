@@ -22,19 +22,19 @@ class UserUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
-        if($this->method() === 'PUT'){
+        if ($this->method() === 'PUT') {
             return [
                 'name' => ['required', 'string', 'max:255'],
-                'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 
-                            'unique:users,email,'.Auth::user()->id  ],
+                'email' => ['required', 'string', 'lowercase', 'email', 'max:255',
+                    'unique:users,email,'.Auth::user()->id],
                 'phone' => ['nullable', 'string', 'max:20', 'min:10'],
                 'address' => ['nullable', 'string', 'max:255'],
             ];
-        }else{
+        } else {
             return [
                 'name' => ['sometimes', 'string', 'max:255'],
-                'email' => ['sometimes', 'string', 'lowercase', 'email', 'max:255', 
-                            'unique:users,email,'.Auth::user()->id  ],
+                'email' => ['sometimes', 'string', 'lowercase', 'email', 'max:255',
+                    'unique:users,email,'.Auth::user()->id],
                 'phone' => ['sometimes', 'string', 'max:20', 'min:10'],
                 'address' => ['sometimes', 'string', 'max:255'],
             ];

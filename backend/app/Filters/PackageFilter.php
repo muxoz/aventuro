@@ -1,11 +1,9 @@
-<?php 
- 
- namespace App\Filters;
+<?php
 
-use Illuminate\Http\Request;
+namespace App\Filters;
 
-class PackageFilter extends ApiFilters{
-    
+class PackageFilter extends ApiFilters
+{
     protected array $safeParams = [
         'title' => ['eq'],
         'price' => ['eq', 'lt', 'gt'],
@@ -13,10 +11,8 @@ class PackageFilter extends ApiFilters{
         'duration' => ['eq', 'gt', 'lt'],
         'categoryId' => ['eq'],
     ];
+
     protected array $columnMap = [
-        'categoryId' => 'category_id' 
+        'categoryId' => 'category_id',
     ];
-
-
-
 }

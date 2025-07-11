@@ -18,18 +18,18 @@ class PackageController extends Controller
      */
     public function index(Request $request)
     {
-        $filter = new PackageFilter();
+        $filter = new PackageFilter;
         $queryItems = $filter->transform($request);
         // return $request->query('q');
 
         $packages = Package::with(['offer', 'category'])
-        ->where($queryItems)
-        ->whereAny([
-            'title', 'destination'
-        ], 'LIKE', '%'.$request->query('q').'%')
-        ->paginate(9)
-        ->appends($request->query());
-        
+            ->where($queryItems)
+            ->whereAny([
+                'title', 'destination',
+            ], 'LIKE', '%'.$request->query('q').'%')
+            ->paginate(9)
+            ->appends($request->query());
+
         return PackageResource::collection($packages);
     }
 
@@ -50,10 +50,10 @@ class PackageController extends Controller
     public function show(string $slug)
     {
         $package = Package::with('category', 'items', 'offer')
-        ->where('slug', $slug)->firstOrFail();
-        
+            ->where('slug', $slug)->firstOrFail();
+
         return response()->json([
-            'package' => new PackageResource($package)
+            'package' => new PackageResource($package),
         ]);
     }
 

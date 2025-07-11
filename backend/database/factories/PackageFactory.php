@@ -31,13 +31,13 @@ class PackageFactory extends Factory
         ];
 
         return [
-            'category_id'=> Category::inRandomOrder()->pluck('id')->first(),
+            'category_id' => Category::inRandomOrder()->pluck('id')->first(),
             'title' => fake()->sentence(2),
             'description' => fake()->paragraph(),
             'slug' => fake()->unique()->slug(),
-            'image' => $images[random_int(0,8)],
+            'image' => $images[random_int(0, 8)],
             'price' => fake()->randomFloat(2, 2000, 20000),
-            'destination' => fake()->country(). ' ' .fake()->city(),
+            'destination' => fake()->country().' '.fake()->city(),
             'duration' => fake()->numberBetween(1, 30),
         ];
     }

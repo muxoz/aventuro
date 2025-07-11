@@ -14,10 +14,11 @@ class Item extends Model
 
     protected $fillable = [
         'package_id',
-        'name'
+        'name',
     ];
 
-    public function package() : BelongsTo {
+    public function package(): BelongsTo
+    {
         return $this->belongsTo(Package::class);
     }
 }
