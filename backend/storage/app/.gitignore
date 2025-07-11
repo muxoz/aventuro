@@ -1,3 +1,5 @@
-*
-!public/
+/storage/app/*
+!/storage/app/public/
+!/storage/app/public/packages/
+!/storage/app/public/packages/**
 !.gitignore
