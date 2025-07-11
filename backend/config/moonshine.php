@@ -19,8 +19,8 @@ use MoonShine\Laravel\Pages\ProfilePage;
 
 return [
     'title' => env('MOONSHINE_TITLE', 'Aventuro'),
-    'logo' => 'vendor/moonshine/logo.svg',
-    'logo_small' => 'vendor/moonshine/logo-small.svg',
+    'logo' => 'imgs/icon.png',
+    'logo_small' => 'imgs/icon.png',
 
     // Default flags
     'use_migrations' => false,

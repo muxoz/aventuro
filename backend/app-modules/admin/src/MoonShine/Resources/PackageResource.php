@@ -53,7 +53,7 @@ class PackageResource extends ModelResource
             BelongsTo::make('Category', resource: CategoryResource::class)->badge('primary'),
             Text::make('Title'),
             Text::make('Destination'),
-            Text::make('Duration', formatted: fn ($item) => $item->duration.' days'),
+            Text::make('Duration', formatted: fn($item) => $item->duration . ' days'),
             Text::make('Price'),
             Text::make('Items', 'items_count'),
             Preview::make('Offer', 'offer_count')
@@ -83,14 +83,7 @@ class PackageResource extends ModelResource
             ]),
             Textarea::make('Description'),
 
-            HasMany::make('Items', resource: ItemResource::class)
-                ->tabMode()
-                ->creatable()
-                ->searchable(false),
-
-            HasOne::make('Offer', resource: OfferResource::class)
-                ->tabMode(),
-
+           ...$this->relations()
         ];
     }
 
@@ -101,18 +94,26 @@ class PackageResource extends ModelResource
             BelongsTo::make('Category', resource: CategoryResource::class)->badge('primary'),
             Text::make('Title'),
             Text::make('Destination'),
-            Text::make('Duration', formatted: fn ($item) => $item->duration.' days'),
+            Text::make('Duration', formatted: fn($item) => $item->duration . ' days'),
             Text::make('Price'),
-            HasOne::make('Offer', resource: OfferResource::class)
-                ->tabMode(),
 
+            ...$this->relations()
+        ];
+    }
+
+    public function relations(): array
+    {
+        return [
             HasMany::make('Items', 'items', resource: ItemResource::class)
                 ->tabMode()
                 ->creatable()
                 ->searchable(false),
 
+            HasOne::make('Offer', resource: OfferResource::class)
+                ->tabMode(),
         ];
     }
+
 
     protected function modifyQueryBuilder(Builder $builder): Builder
     {
@@ -140,7 +141,7 @@ class PackageResource extends ModelResource
             return [
                 'category_id' => 'required|integer|exists:categories,id',
                 'title' => 'required|string|max:50',
-                'slug' => 'required|string|max:255|unique:packages,slug,'.$item->id,
+                'slug' => 'required|string|max:255|unique:packages,slug,' . $item->id,
                 'description' => 'required|string|max:1000',
                 'destination' => 'required|string|max:255',
                 'duration' => 'required|integer|max:255',

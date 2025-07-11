@@ -11,6 +11,8 @@ use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Laravel\Layouts\AppLayout;
 use MoonShine\MenuManager\MenuItem;
+use MoonShine\UI\Components\Layout\Favicon;
+use MoonShine\UI\Components\Layout\Footer;
 use MoonShine\UI\Components\Layout\Layout;
 
 final class MoonShineLayout extends AppLayout
@@ -21,6 +23,27 @@ final class MoonShineLayout extends AppLayout
             ...parent::assets(),
         ];
     }
+
+    protected function getFaviconComponent(): Favicon
+    {
+        return parent::getFaviconComponent()->customAssets([
+            'apple-touch' => '/imgs/icon.png',
+            '32' => '/imgs/icon.png',
+            '16' => '/imgs/icon.png',
+            'safari-pinned-tab' => '/imgs/icon.png',
+            'web-manifest' => '/imgs/icon.png',
+        ]);
+    }
+
+    protected function getFooterComponent(): Footer
+    {
+        return Footer::make()
+            ->copyright(
+                fn(): string => ''
+            )
+            ->menu($this->getFooterMenu());
+    }
+
 
     protected function menu(): array
     {
