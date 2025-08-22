@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Resources;
+namespace Modules\Admin\MoonShine\Resources;
 
 use App\Models\Offer;
-use Estivenm0\Moonlaunch\Traits\Properties;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Laravel\Enums\Action;
 use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Resources\ModelResource;

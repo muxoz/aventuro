@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Models;
+namespace Modules\Moonlaunch\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

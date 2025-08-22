@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc726af7900d8b991338e4798473244b",
+    "content-hash": "b8cd5a424f9839d949eac2e0375f3ee3",
     "packages": [
         {
             "name": "brick/math",
@@ -1223,73 +1223,6 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
-        },
-        {
-            "name": "estivenm0/admin",
-            "version": "1.0",
-            "dist": {
-                "type": "path",
-                "url": "app-modules/admin",
-                "reference": "4a26118f76994466dc3ef428a0f9ff3b04e14e09"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Estivenm0\\Admin\\Providers\\AdminServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Estivenm0\\Admin\\": "src/",
-                    "Estivenm0\\Admin\\Tests\\": "tests/",
-                    "Estivenm0\\Admin\\Database\\Factories\\": "database/factories/",
-                    "Estivenm0\\Admin\\Database\\Seeders\\": "database/seeders/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "estivenm0/moonlaunch",
-            "version": "1.0",
-            "dist": {
-                "type": "path",
-                "url": "app-modules/moonlaunch",
-                "reference": "f6e05db8413c06af5971a4ecaafd08043fbe2695"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Estivenm0\\Moonlaunch\\Providers\\MoonlaunchServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Estivenm0\\Moonlaunch\\": "src/",
-                    "Estivenm0\\Moonlaunch\\Tests\\": "tests/",
-                    "Estivenm0\\Moonlaunch\\Database\\Factories\\": "database/factories/",
-                    "Estivenm0\\Moonlaunch\\Database\\Seeders\\": "database/seeders/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Estivenm0"
-                }
-            ],
-            "description": "Starter kit for moonshine",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
         },
         {
             "name": "fruitcake/php-cors",
@@ -3238,6 +3171,135 @@
                 "source": "https://github.com/marc-mabe/php-enum/tree/v4.7.1"
             },
             "time": "2024-11-28T04:54:44+00:00"
+        },
+        {
+            "name": "modules/admin",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/admin",
+                "reference": "8cee9b332ef642086606546a0c29520975ecf165"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Admin\\Providers\\AdminServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Admin\\": "src/",
+                    "Modules\\Admin\\Tests\\": "tests/",
+                    "Modules\\Admin\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Admin\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/api-v1",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/api-v1",
+                "reference": "3473acc646a0a6c5c2578561fbc16a684134e94e"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\ApiV1\\Providers\\ApiV1ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\ApiV1\\": "src/",
+                    "Modules\\ApiV1\\Tests\\": "tests/",
+                    "Modules\\ApiV1\\Database\\Factories\\": "database/factories/",
+                    "Modules\\ApiV1\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/auth",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/auth",
+                "reference": "e35a53503cf5517f4f4ab86c0269876058412493"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Auth\\Providers\\AuthServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Auth\\": "src/",
+                    "Modules\\Auth\\Tests\\": "tests/",
+                    "Modules\\Auth\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Auth\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/moonlaunch",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/moonlaunch",
+                "reference": "349c79c5886a2865d5d58992001060c1df6fe4da"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Moonlaunch\\Providers\\MoonlaunchServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Moonlaunch\\": "src/",
+                    "Modules\\Moonlaunch\\Tests\\": "tests/",
+                    "Modules\\Moonlaunch\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Moonlaunch\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Starter kit for moonshine",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "monolog/monolog",
@@ -8615,16 +8677,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.43.1",
+            "version": "v1.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "3e7d899232a8c5e3ea4fc6dee7525ad583887e72"
+                "reference": "a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/3e7d899232a8c5e3ea4fc6dee7525ad583887e72",
-                "reference": "3e7d899232a8c5e3ea4fc6dee7525ad583887e72",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
+                "reference": "a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
                 "shasum": ""
             },
             "require": {
@@ -8674,7 +8736,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2025-05-19T13:19:21+00:00"
+            "time": "2025-07-04T16:17:06+00:00"
         },
         {
             "name": "mockery/mockery",

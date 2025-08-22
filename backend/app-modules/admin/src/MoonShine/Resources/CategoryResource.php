@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Resources;
+namespace Modules\Admin\MoonShine\Resources;
 
 use App\Models\Category;
-use Estivenm0\Moonlaunch\Traits\Properties;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Components\MoonShineComponent;
 use MoonShine\Fields\Field;
 use MoonShine\Laravel\Enums\Action;

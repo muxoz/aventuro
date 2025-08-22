@@ -37,8 +37,8 @@ onMounted(()=>{
 
 <template>
   <FilterP>
-    <div class="w-full [border-left:1px_solid_rgb(217,_217,_217)]" v-if="packages.list.length > 0">
-      <div class="flex flex-wrap gap-2 " >
+    <div class="w-full" v-if="packages.list.length > 0">
+      <div class="flex flex-wrap gap-3" >
         <template v-for="pack, index in packages.list" v-bind:key="index">
         <PackageItem :pack />
         </template>

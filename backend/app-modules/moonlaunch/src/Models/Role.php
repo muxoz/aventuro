@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Models;
+namespace Modules\Moonlaunch\Models;
 
 use Spatie\Permission\Models\Role as ModelsRole;
 use Sweet1s\MoonshineRBAC\Traits\HasMoonShineRolePermissions;

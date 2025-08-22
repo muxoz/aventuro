@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Resources;
+namespace Modules\Admin\MoonShine\Resources;
 
 use App\Models\User;
-use Estivenm0\Moonlaunch\Traits\Properties;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Laravel\Enums\Action;
 use MoonShine\Laravel\Fields\Relationships\HasMany;
 use MoonShine\Laravel\Resources\ModelResource;

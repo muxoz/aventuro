@@ -1,13 +1,13 @@
 <?php
 
-namespace Estivenm0\Admin\Services;
+namespace Modules\Admin\Services;
 
-use Estivenm0\Admin\MoonShine\Resources\BookingResource;
-use Estivenm0\Admin\MoonShine\Resources\CategoryResource;
-use Estivenm0\Admin\MoonShine\Resources\CustomerResource;
-use Estivenm0\Admin\MoonShine\Resources\ItemResource;
-use Estivenm0\Admin\MoonShine\Resources\OfferResource;
-use Estivenm0\Admin\MoonShine\Resources\PackageResource;
+use Modules\Admin\MoonShine\Resources\BookingResource;
+use Modules\Admin\MoonShine\Resources\CategoryResource;
+use Modules\Admin\MoonShine\Resources\CustomerResource;
+use Modules\Admin\MoonShine\Resources\ItemResource;
+use Modules\Admin\MoonShine\Resources\OfferResource;
+use Modules\Admin\MoonShine\Resources\PackageResource;
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use Sweet1s\MoonshineRBAC\Components\MenuRBAC;

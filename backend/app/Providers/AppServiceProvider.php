@@ -38,6 +38,11 @@ class AppServiceProvider extends ServiceProvider
 
         JsonResource::wrap('list');
 
+        Scramble::registerApi('v1', [
+            'api_path' => 'api/v1',
+            'api_path' => 'api',
+        ]);
+
         Scramble::afterOpenApiGenerated(function (OpenApi $openApi) {
             $openApi->secure(
                 SecurityScheme::http('bearer')

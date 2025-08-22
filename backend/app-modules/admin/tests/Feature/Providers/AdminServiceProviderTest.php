@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Admin\Tests;
+namespace Modules\Admin\Tests;
 
 class AdminServiceProviderTest extends TestCase
 {

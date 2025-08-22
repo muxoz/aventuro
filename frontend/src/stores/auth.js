@@ -3,8 +3,6 @@ import client  from '@/utils/client'
 import { defineStore } from 'pinia'
 import { useToast } from 'vue-toastification'
 
-
-
 const url = '/api/v1'
 
 export const useAuthStore = defineStore('auth', {

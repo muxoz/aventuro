@@ -1,28 +1,23 @@
 {
-	"name": "estivenm0/moonlaunch",
+	"name": "modules/moonlaunch",
 	"description": "Starter kit for moonshine",
 	"type": "library",
 	"version": "1.0",
-	"license": "",
-	"authors": [
-		{
-		"name": "Estivenm0"
-		}
-	],
+	"license": "MIT",
 	"require": {},
 	"autoload": {
 		"psr-4": {
-			"Estivenm0\\Moonlaunch\\": "src/",
-			"Estivenm0\\Moonlaunch\\Tests\\": "tests/",
-			"Estivenm0\\Moonlaunch\\Database\\Factories\\": "database/factories/",
-			"Estivenm0\\Moonlaunch\\Database\\Seeders\\": "database/seeders/"
+			"Modules\\Moonlaunch\\": "src/",
+			"Modules\\Moonlaunch\\Tests\\": "tests/",
+			"Modules\\Moonlaunch\\Database\\Factories\\": "database/factories/",
+			"Modules\\Moonlaunch\\Database\\Seeders\\": "database/seeders/"
 		}
 	},
 	"minimum-stability": "stable",
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Estivenm0\\Moonlaunch\\Providers\\MoonlaunchServiceProvider"
+				"Modules\\Moonlaunch\\Providers\\MoonlaunchServiceProvider"
 			]
 		}
 	}

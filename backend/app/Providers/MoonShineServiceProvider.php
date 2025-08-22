@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Estivenm0\Admin\MoonShine\Resources\CategoryResource;
 use Illuminate\Support\ServiceProvider;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Contracts\Core\DependencyInjection\ConfiguratorContract;

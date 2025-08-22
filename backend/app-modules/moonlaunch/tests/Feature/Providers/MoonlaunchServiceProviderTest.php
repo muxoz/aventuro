@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Tests;
+namespace Modules\Moonlaunch\Tests;
 
 class MoonlaunchServiceProviderTest extends TestCase
 {

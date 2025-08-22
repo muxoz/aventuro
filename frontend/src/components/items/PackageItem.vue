@@ -7,14 +7,13 @@ defineProps(['pack'])
 <template>
 
   <div class="antialiased text-gray-900 ">
-    <div class="overflow-hidden bg-white rounded-lg shadow-xl w-60 h-96 shadow-indigo-400">
-      <!--E11-->
+    <div class="border border-gray-100 bg-white/70 backdrop-blur-lg
+    overflow-hidden rounded-lg shadow-lg  w-60 h-96 shadow-indigo-300">
       <img class="object-cover w-full h-48 object-end" :src="pack.image" alt="Home in Countryside" />
 
       <div class="px-3 py-4">
-        <span
-          class="inline-block px-4 py-1 mx-1 text-xs font-semibold tracking-wide text-indigo-800 uppercase bg-indigo-200 rounded-full">{{
-            pack.category }}</span>
+        <span class="badge badge-primary rounded-lg">{{ pack.category }}</span>
+
         <RouterLink :to="{ name: 'packages.details', params: { slug: pack.slug } }">
           <h4 class="text-lg font-semibold leading-tight truncate ">{{ pack.title }}</h4>
         </RouterLink>
@@ -27,10 +26,10 @@ defineProps(['pack'])
         </div>
 
         <div class="mt-1">
-          <span>$ {{ pack.price }}</span>  <span v-if="pack.priced"
-            class="inline-block px-4 py-1 mx-1 text-xs font-semibold tracking-wide text-red-800 uppercase bg-red-200 rounded-full"
-            title="Discount">10% </span>
-         
+          <span>$ {{ pack.price }}</span>
+          <span v-if="pack.priced" class="badge badge-error rounded-lg mx-1" title="Discount">10%
+          </span>
+
         </div>
 
       </div>
