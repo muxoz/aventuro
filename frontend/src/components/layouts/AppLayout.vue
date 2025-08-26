@@ -1,7 +1,7 @@
 <template>
-        <NavBar/>
-        <main class="py-20 ">
-                <RouterView/>
+        <NavBar />
+        <main class="pt-20">
+                <RouterView />
         </main>
 </template>
 
@@ -10,4 +10,3 @@ import NavBar from '@/components/common/NavBar.vue';
 import { RouterView } from 'vue-router'
 
 </script>
-

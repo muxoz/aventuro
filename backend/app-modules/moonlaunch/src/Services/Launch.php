@@ -1,9 +1,9 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Services;
+namespace Modules\Moonlaunch\Services;
 
-use Estivenm0\Moonlaunch\MoonShine\Resources\AdminResource;
-use Estivenm0\Moonlaunch\MoonShine\Resources\RoleResource;
+use Modules\Moonlaunch\MoonShine\Resources\AdminResource;
+use Modules\Moonlaunch\MoonShine\Resources\RoleResource;
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use Sweet1s\MoonshineRBAC\Components\MenuRBAC;

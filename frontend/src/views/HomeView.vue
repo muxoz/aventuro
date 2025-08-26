@@ -7,7 +7,6 @@ import { RouterLink } from 'vue-router';
 
 const packs = ref([])
 
-
 onMounted(async()=>{
     let res = await client.get('/api/v1/packages');
     packs.value = res.data.list.slice(0, 3);
@@ -17,7 +16,7 @@ onMounted(async()=>{
 
 
   <template>
-    <div class="bg-pattern">
+    <div class="">
         <header >
             <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-7">
                 <div class="flex items-center justify-center gap-4 md:gap-4">
@@ -51,7 +50,7 @@ onMounted(async()=>{
               
             </div>
             <RouterLink to="/packages"
-                class="inline-block px-6 py-2 mx-auto mt-10 font-bold text-white bg-purple-600 border-2 border-purple-600 rounded-lg hover:bg-white hover:text-purple-600">
+                class="btn btn-primary mx-auto rounded-3xl mt-10">
                 More Packages 
             </RouterLink>
         </div>

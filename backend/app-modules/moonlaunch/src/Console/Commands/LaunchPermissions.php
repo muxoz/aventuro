@@ -1,10 +1,10 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Console\Commands;
+namespace Modules\Moonlaunch\Console\Commands;
 
-use Estivenm0\Admin\Services\AdminModule;
-use Estivenm0\Moonlaunch\Services\Launch;
 use Illuminate\Console\Command;
+use Modules\Admin\Services\AdminModule;
+use Modules\Moonlaunch\Services\Launch;
 
 class LaunchPermissions extends Command
 {
@@ -27,7 +27,6 @@ class LaunchPermissions extends Command
      */
     public function handle(Launch $launch, AdminModule $adminModule)
     {
-        // dd($adminModule->getResources());
         foreach ($launch->getResources() as $item) {
             $this->call('moonshine-rbac:permissions', [
                 'resourceName' => class_basename($item),

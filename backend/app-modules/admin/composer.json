@@ -1,5 +1,5 @@
 {
-	"name": "estivenm0/admin",
+	"name": "modules/admin",
 	"description": "",
 	"type": "library",
 	"version": "1.0",
@@ -7,17 +7,17 @@
 	"require": {},
 	"autoload": {
 		"psr-4": {
-			"Estivenm0\\Admin\\": "src/",
-			"Estivenm0\\Admin\\Tests\\": "tests/",
-			"Estivenm0\\Admin\\Database\\Factories\\": "database/factories/",
-			"Estivenm0\\Admin\\Database\\Seeders\\": "database/seeders/"
+			"Modules\\Admin\\": "src/",
+			"Modules\\Admin\\Tests\\": "tests/",
+			"Modules\\Admin\\Database\\Factories\\": "database/factories/",
+			"Modules\\Admin\\Database\\Seeders\\": "database/seeders/"
 		}
 	},
 	"minimum-stability": "stable",
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Estivenm0\\Admin\\Providers\\AdminServiceProvider"
+				"Modules\\Admin\\Providers\\AdminServiceProvider"
 			]
 		}
 	}

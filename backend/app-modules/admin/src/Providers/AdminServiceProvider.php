@@ -1,9 +1,9 @@
 <?php
 
-namespace Estivenm0\Admin\Providers;
+namespace Modules\Admin\Providers;
 
-use Estivenm0\Admin\Services\AdminModule;
 use Illuminate\Support\ServiceProvider;
+use Modules\Admin\Services\AdminModule;
 use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
 
 class AdminServiceProvider extends ServiceProvider

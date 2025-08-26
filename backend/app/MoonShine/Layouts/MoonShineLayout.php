@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\MoonShine\Layouts;
 
 use App\MoonShine\Pages\Dashboard;
-use Estivenm0\Admin\Services\AdminModule;
-use Estivenm0\Moonlaunch\Services\Launch;
+use Modules\Admin\Services\AdminModule;
+use Modules\Moonlaunch\Services\Launch;
 use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Laravel\Layouts\AppLayout;
@@ -39,11 +39,10 @@ final class MoonShineLayout extends AppLayout
     {
         return Footer::make()
             ->copyright(
-                fn(): string => ''
+                fn (): string => ''
             )
             ->menu($this->getFooterMenu());
     }
-
 
     protected function menu(): array
     {

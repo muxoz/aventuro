@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'modules_namespace' => 'Estivenm0',
+    'modules_namespace' => 'Modules',
 
     /*
     |--------------------------------------------------------------------------

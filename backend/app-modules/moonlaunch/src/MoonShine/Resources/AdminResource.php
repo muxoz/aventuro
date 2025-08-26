@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Moonlaunch\MoonShine\Resources;
+namespace Modules\Moonlaunch\MoonShine\Resources;
 
 use App\Models\User;
-use Estivenm0\Moonlaunch\Traits\Properties;
 use Illuminate\Validation\Rule;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Fields\Relationships\BelongsToMany;
 use MoonShine\Laravel\Resources\ModelResource;

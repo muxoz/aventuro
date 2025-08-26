@@ -1,78 +1,28 @@
-# 🌐 Aventuro
+# 🌐 **Aventuro**
 
-Aventuro is a travel agency web application that allows users to explore travel packages, make reservations, and manage their accounts efficiently. With JWT authentication and various features, it provides a seamless and intuitive booking experience. 
+Aventuro is a travel agency web application where users can explore travel packages, make reservations, and manage their accounts efficiently.  
+It uses **JWT authentication** and offers a seamless, intuitive booking experience.
 
-## Content
+[📖 Documentation](./_docs/README.md)
 
-- [Demo](#demo)
-- [Technologies](#technologies)
-- [Installation](#installation)
-
-
-## Demo
-
-[Watch Video](https://youtu.be/enFP3gEd3sQ)
-
-### Frontend
-|![Packages](./_docs/front/packages.png) | ![Package](./_docs/front/package.png) | ![Bookings](./_docs/front/bookings.png) | ![Booking](./_docs/front/booking.png) |
-| ------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- | 
-
-### Backend
-
-|![Home](./_docs/back/doc-api.png) | ![Packages](./_docs/back/packages.png) | ![Bookings](./_docs/back/bookings.png) | ![Booking](./_docs/back/admins.png) |
-| ------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- | 
-
-## Technologies
-| Backend (Laravel)  | Frontend (Vue ) |
-|--------------------|------------------------|
-| Laravel 11        | Vue.js 3               |
-| MoonShine 3       | Tailwind CSS           |
-| MySQL            | Pinia                   |
-| JWT               |                        |
+## 📦 **Tech Stack**
+**Backend:** Laravel 11, Internachi Modular 2, MoonShine 3, JWT-Auth 2, Scramble 0.11  
+**Frontend:** Vue 3, Pinia 2, DaisyUI 5  
+**Tools:** PHP 8.2, MySQL 8
 
 
-
-## Requirements
-
-| Package                              | Version |
-| ------------------------------------ | ------- |
-| [Composer](https://getcomposer.org/) | V2.4.1  |
-| [PHP](https://www.php.net/)          | V8.3.6  |
-| [MySQL](https://www.mysql.com/)      | V8.0.30 |
+![Home](./_docs/front/home.webp)
 
 ---
 
-## Installation
-Here is how you can run the project locally:
+## 🚀 **Demo**
 
-1. Clone the repository
+### 🔸 **Frontend**
 
-```bash
-git clone https://github.com/estivenm0/aventuro.git
-cd aventuro
-```
+| ![Packages](./_docs/front/packages.webp) | ![Package](./_docs/front/package.webp) | ![Bookings](./_docs/front/bookings.webp) | ![Booking](./_docs/front/booking.webp) |
+| :-------------------------------------: | :-----------------------------------: | :-------------------------------------: | :-----------------------------------: |
 
-###  Backend
+### 🔸 **Backend**
 
-```bash
-cd backend
-cp .env.example .env
-composer install
-php artisan jwt:secret
-php artisan key:generate
-php artisan migrate --seed
-php artisan storage:link
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-
-## Database
-
-![Database](./_docs/back/aventuroDB.jpg)
+| ![API Docs](./_docs/back/doc-api.webp) | ![Admin Dashboard](./_docs/back/admin-dashboard.webp) | ![Admin Packages](./_docs/back/admin-packages.webp) | ![Admin Bookings](./_docs/back/admin-bookings.webp) |
+| :-----------------------------------: | :--------------------------------------------------: | :------------------------------------------------: | :------------------------------------------------: |

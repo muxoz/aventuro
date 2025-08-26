@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Traits;
+namespace Modules\Moonlaunch\Traits;
 
 use MoonShine\Support\Enums\PageType;
 

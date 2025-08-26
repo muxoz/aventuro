@@ -1,9 +1,9 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Providers;
+namespace Modules\Moonlaunch\Providers;
 
-use Estivenm0\Moonlaunch\Services\Launch;
 use Illuminate\Support\ServiceProvider;
+use Modules\Moonlaunch\Services\Launch;
 use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
 
 class MoonlaunchServiceProvider extends ServiceProvider
